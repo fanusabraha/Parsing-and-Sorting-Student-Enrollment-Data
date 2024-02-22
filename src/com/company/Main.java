@@ -10,7 +10,6 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         User[] users = new User[101];
-        String str = "";
         String[] studentsdata  ;
         int i = 0;
 
@@ -21,6 +20,8 @@ public class Main {
              writer1 = new BufferedWriter(new FileWriter("course1.csv"));
             writer2 = new BufferedWriter(new FileWriter("course2.csv"));
              writer3 = new BufferedWriter(new FileWriter("course3.csv"));
+            String headerLine = reader.readLine();
+            String str ;
             while ((str = reader.readLine()) != null) {
                 studentsdata = str.split(",");
                 users[i++] = new User(studentsdata[0], studentsdata[1], studentsdata[2],  studentsdata[3]== null ? 0 :Integer.parseInt(studentsdata[3]));
