@@ -22,6 +22,9 @@ public class Main {
              writer3 = new BufferedWriter(new FileWriter("course3.csv"));
             String headerLine = reader.readLine();
             String str ;
+            writer1.write(headerLine + "\n");
+            writer2.write(headerLine + "\n");
+            writer3.write(headerLine + "\n");
             while ((str = reader.readLine()) != null) {
                 studentsdata = str.split(",");
                 users[i++] = new User(studentsdata[0], studentsdata[1], studentsdata[2],  studentsdata[3]== null ? 0 :Integer.parseInt(studentsdata[3]));
