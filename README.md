@@ -1,5 +1,3 @@
-# Parsing-and-Sorting-Student-Enrollment-Data
-
  # README: Parsing and Sorting Student Enrollment Data
 
 ## Overview
